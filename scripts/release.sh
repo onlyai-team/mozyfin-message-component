@@ -43,8 +43,7 @@ npm run build
 
 if [[ "$DRY_RUN" == true ]]; then
   echo "[dry-run] Would commit, tag v$NEW_VERSION, push, and publish to npm."
-  # Reset the version bump
-  git checkout package.json
+  git checkout package.json package-lock.json
   exit 0
 fi
 
