@@ -1,6 +1,6 @@
 {
   "name": "mozyfin-message-component",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Mozyfin message content renderer – renders markdown, inline charts, citations, and highlight cards. No CSS import needed.",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
