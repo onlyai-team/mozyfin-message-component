@@ -49,7 +49,7 @@ if [[ "$DRY_RUN" == true ]]; then
 fi
 
 # Commit version bump
-git add package.json
+git add package.json package-lock.json
 git commit -m "chore: release v$NEW_VERSION"
 
 # Tag and push
