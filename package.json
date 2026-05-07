@@ -10,12 +10,16 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
-    }
+    },
+    "./styles": "./dist/styles.css"
   },
   "files": ["dist"],
   "scripts": {
-    "build": "vite build && tsc --emitDeclarationOnly --declarationDir dist",
-    "dev": "vite build --watch"
+    "build": "vite build && tsc --emitDeclarationOnly --declarationDir dist && vite build --config vite.css.config.ts",
+    "dev": "vite build --watch",
+    "release": "bash scripts/release.sh",
+    "release:minor": "bash scripts/release.sh minor",
+    "release:major": "bash scripts/release.sh major"
   },
   "peerDependencies": {
     "react": ">=18",

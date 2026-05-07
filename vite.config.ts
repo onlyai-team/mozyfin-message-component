@@ -1,8 +1,6 @@
-import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 import { defineConfig } from "vite";
-import cssInjectedByJs from "vite-plugin-css-injected-by-js";
 import dts from "vite-plugin-dts";
 
 const EXTERNAL_PACKAGES = [
@@ -21,7 +19,6 @@ const EXTERNAL_PACKAGES = [
   "class-variance-authority",
   "clsx",
   "tailwind-merge",
-  // transitive markdown/rehype/remark deps
   "unified",
   "remark",
   "rehype",
@@ -34,8 +31,6 @@ const EXTERNAL_PACKAGES = [
 export default defineConfig({
   plugins: [
     react(),
-    tailwindcss(),
-    cssInjectedByJs(),
     dts({
       include: ["src"],
       insertTypesEntry: true,

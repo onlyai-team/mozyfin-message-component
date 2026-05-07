@@ -1,5 +1,3 @@
-import "@/styles/index.css";
-
 import React, { useMemo } from "react";
 
 import { parseContent } from "@/lib/parseContent";
@@ -93,15 +91,17 @@ const MessageContent = ({
 }: MessageContentProps) => {
   const contents = useMemo(() => parseContent(content), [content]);
 
-  return (
-    <div className={className}>
-      {contents.map((item, i) => (
-        <React.Fragment key={i}>
-          {renderItem(item, refs, renderPortfolioChart)}
-        </React.Fragment>
-      ))}
-    </div>
-  );
+  const items = contents.map((item, i) => (
+    <React.Fragment key={i}>
+      {renderItem(item, refs, renderPortfolioChart)}
+    </React.Fragment>
+  ));
+
+  if (className) {
+    return <div className={className}>{items}</div>;
+  }
+
+  return <>{items}</>;
 };
 
 export default MessageContent;
