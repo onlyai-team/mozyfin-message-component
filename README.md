@@ -1,6 +1,11 @@
 # mozyfin-message-component
 
+
 React component library for rendering rich message content — markdown, inline charts, math, citations, and highlight cards.
+
+## Getting Started
+[DEMO](https://github.com/onlyai-team/mozyfin-message-component-demo)
+
 
 ## Features
 
